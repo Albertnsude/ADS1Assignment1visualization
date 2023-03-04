@@ -10,6 +10,7 @@ df_europe_gdp = pd.read_csv('GDP_table_europe.csv', index_col=0)
 
 year = ['2017', '2018', '2019', '2020', '2021']
 
+# Plotting a line plot of the GDP of the European countries
 
 def plot_gdp_line(df_europe_gdp, x_column, y_cols):
     """
@@ -39,6 +40,7 @@ def plot_gdp_line(df_europe_gdp, x_column, y_cols):
 
 plot_gdp_line(df_europe_gdp, 'year', list(df_europe_gdp.columns))
 
+# Plotting a stacked bar of the GDP of the European countries
 
 def stacked_gdp_bar(df_europe_gdp):
     """
@@ -54,7 +56,7 @@ def stacked_gdp_bar(df_europe_gdp):
 
     df_europe_gdp.plot(kind='bar', stacked=True)
     plt.xlabel('Year')
-    plt.ylabel('GDP (in 100 billion US dollars')
+    plt.ylabel('GDP (in 100 billion US dollars)')
     plt.title(f'Comparison of GDPs for Six European Countries')
     plt.legend(loc='center left', bbox_to_anchor=(1.0, 0.5))
 
@@ -64,7 +66,6 @@ def stacked_gdp_bar(df_europe_gdp):
 stacked_gdp_bar(df_europe_gdp)
 
 # Plotting a pie chart of the GDP of the European countries
-
 
 def plot_gdp_pie(year, countries):
     """
