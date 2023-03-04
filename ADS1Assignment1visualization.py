@@ -31,7 +31,7 @@ def plot_gdp_line(df_europe_gdp, x_column, y_cols):
 
     # Adding labels, title, and legend
     plt.xlabel('Year')
-    plt.ylabel('GDP (in 100 billion US dollars')
+    plt.ylabel('GDP (in 100 billion US dollars)')
     plt.title('GDP Trends of Six European Countries (2017-2021)')
     plt.legend(loc='upper right')
 
